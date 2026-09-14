@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">  <!--Set the language to English-->
+    <head>
+        <!-- Character encoding: ensures special characters display correctly -->
+        <meta charset="UTF-8">
+        <!-- Makes the page responsive by matching the device's actual screen width -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--Tab Title-->
+        <title>Rohini Devi Beegoo — Portfolio</title>
+
+        <!--Link to CSS-->
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <!--Navigation Bar-->
+        <header>
+            <!--Navigation Decorations-->
+            <div class="header-decor">
+                <!--Day Decorations-->
+                <div class="deco-sun"></div>
+                <div class="deco-cloud cloud-1"></div>
+                <div class="deco-cloud cloud-2"></div>
+                <div class="deco-cloud cloud-3"></div>
+                <div class="deco-cloud cloud-4"></div>
+                <!--Night Decorations-->
+                <div class="deco-moon"></div>
+                <div class="deco-star star-1"></div>
+                <div class="deco-star star-2"></div>
+                <div class="deco-star star-3"></div>
+                <div class="deco-star star-4"></div>
+                <div class="deco-star star-5"></div>
+                <div class="deco-star star-6"></div>
+            </div>
+
+            <!--Navigation Links-->
+            <nav id="main-nav">
+                <!--Links directing to different sections of same page-->
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#education">Education</a>
+                <a href="#activities">Activities/Achievements</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <!--Theme Toggle--> 
+            <label class="theme-switch">
+                <!-- Hidden checkbox holds the actual on/off state -->
+                <input type="checkbox" class="theme-switch__checkbox">
+
+                <!-- Visual container for the whole switch -->
+                <div class="theme-switch__container">
+                    <!-- Cloud shapes, visible in light mode -->
+                    <div class="theme-switch__clouds"></div>
+
+                    <!-- Small stars next to the moon, visible in dark mode -->
+                    <div class="theme-switch__stars-container">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 55" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M135.831 3.00688C135.055 3.85027 134.111 4.29946 133 4.35447C134.111 4.40947
+                                                                             135.055 4.85867 135.831 5.71123C136.607 6.55462 136.996 7.56303 136.996 8.72727C136.996 
+                                                                             7.95722 137.172 7.25134 137.525 6.59129C137.886 5.93124 138.372 5.39954 138.98 
+                                                                             5.00535C139.598 4.60199 140.268 4.39114 141 4.35447C139.88 4.2903 138.936 3.85027 
+                                                                             138.16 3.00688C137.384 2.16348 136.996 1.16425 136.996 0C136.996 1.16425 136.607 2.16348 
+                                                                             135.831 3.00688ZM31 23.3545C32.1114 23.2995 33.0551 22.8503 33.8313 22.0069C34.6075 21.1635 
+                                                                             34.9956 20.1642 34.9956 19C34.9956 20.1642 35.3837 21.1635 36.1599 22.0069C36.9361 22.8503 
+                                                                             37.8798 23.2903 39 23.3545C38.2679 23.3911 37.5976 23.602 36.9802 24.0053C36.3716 24.3995 
+                                                                             35.8864 24.9312 35.5248 25.5913C35.172 26.2513 34.9956 26.9572 34.9956 27.7273C34.9956 
+                                                                             26.563 34.6075 25.5546 33.8313 24.7112C33.0551 23.8587 32.1114 23.4095 31 23.3545ZM0 
+                                                                             36.3545C1.11136 36.2995 2.05513 35.8503 2.83131 35.0069C3.6075 34.1635 3.99559 33.1642 
+                                                                             3.99559 32C3.99559 33.1642 4.38368 34.1635 5.15987 35.0069C5.93605 35.8503 6.87982 36.2903 
+                                                                             8 36.3545C7.26792 36.3911 6.59757 36.602 5.98015 37.0053C5.37155 37.3995 4.88644 37.9312 
+                                                                             4.52481 38.5913C4.172 39.2513 3.99559 39.9572 3.99559 40.7273C3.99559 39.563 3.6075 38.5546 
+                                                                             2.83131 37.7112C2.05513 36.8587 1.11136 36.4095 0 36.3545ZM56.8313 24.0069C56.0551 24.8503 
+                                                                             55.1114 25.2995 54 25.3545C55.1114 25.4095 56.0551 25.8587 56.8313 26.7112C57.6075 27.5546 
+                                                                             57.9956 28.563 57.9956 29.7273C57.9956 28.9572 58.172 28.2513 58.5248 27.5913C58.8864 
+                                                                             26.9312 59.3716 26.3995 59.9802 26.0053C60.5976 25.602 61.2679 25.3911 62 25.3545C60.8798 
+                                                                             25.2903 59.9361 24.8503 59.1599 24.0069C58.3837 23.1635 57.9956 22.1642 57.9956 21C57.9956 
+                                                                             22.1642 57.6075 23.1635 56.8313 24.0069ZM81 25.3545C82.1114 25.2995 83.0551 24.8503 83.8313 
+                                                                             24.0069C84.6075 23.1635 84.9956 22.1642 84.9956 21C84.9956 22.1642 85.3837 23.1635 86.1599 
+                                                                             24.0069C86.9361 24.8503 87.8798 25.2903 89 25.3545C88.2679 25.3911 87.5976 25.602 86.9802 
+                                                                             26.0053C86.3716 26.3995 85.8864 26.9312 85.5248 27.5913C85.172 28.2513 84.9956 28.9572 
+                                                                             84.9956 29.7273C84.9956 28.563 84.6075 27.5546 83.8313 26.7112C83.0551 25.8587 82.1114 
+                                                                             25.4095 81 25.3545ZM136 36.3545C137.111 36.2995 138.055 35.8503 138.831 35.0069C139.607 
+                                                                             34.1635 139.996 33.1642 139.996 32C139.996 33.1642 140.384 34.1635 141.16 35.0069C141.936 
+                                                                             35.8503 142.88 36.2903 144 36.3545C143.268 36.3911 142.598 36.602 141.98 37.0053C141.372 
+                                                                             37.3995 140.886 37.9312 140.525 38.5913C140.172 39.2513 139.996 39.9572 139.996 
+                                                                             40.7273C139.996 39.563 139.607 38.5546 138.831 37.7112C138.055 36.8587 137.111 36.4095 136 
+                                                                             36.3545ZM101.831 49.0069C101.055 49.8503 100.111 50.2995 99 50.3545C100.111 50.4095 
+                                                                             101.055 50.8587 101.831 51.7112C102.607 52.5546 102.996 53.563 102.996 54.7273C102.996 
+                                                                             53.9572 103.172 53.2513 103.525 52.5913C103.886 51.9312 104.372 51.3995 104.98 
+                                                                             51.0053C105.598 50.602 106.268 50.3911 107 50.3545C105.88 50.2903 104.936 49.8503 104.16 
+                                                                             49.0069C103.384 48.1635 102.996 47.1642 102.996 46C102.996 47.1642 102.607 48.1635 101.831 
+                                                                             49.0069Z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+
+                    <!-- Circle that slides left/right when toggled -->
+                    <div class="theme-switch__circle-container">
+                        <div class="theme-switch__sun-moon-container">
+                            <!-- Moon shape with craters (spots); sun is just the container's background color -->
+                            <div class="theme-switch__moon">
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                                <div class="theme-switch__spot"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </label>
+
+            <button id="hamburger" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+
+        <!--Home Section-->
+        <section id="home">
+            <div class="home-content">
+                <h1>Rohini Devi Beegoo</h1>
+                <p class="tagline">Computer Science Student</p>
+                <div class="home-actions">
+                    <a href="#projects" class="cta-button">View My Projects</a>
+                    <a href="#contact" class="secondary-link">Get in touch →</a>
+                </div>
+            </div>
+
+            <div class="scroll-indicator">
+                <span class="scroll-text">Scroll Down</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!--About Section-->
+        <section id="about">
+            <div class="section-content fade-in-section">
+                <h2>About Me</h2>
+                <p>
+                    <p>
+                        I'm a student studying Computer Science (Systems Engineering) (Mauritius), with a strong interest in robotics and 
+                        web development. I enjoy the mix of hands-on building and problem-solving 
+                        that robotics involves, and I like bringing ideas to life on the web;
+                        from initial design through to a working, finished site.
+                    </p>
+                </p>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <section id="skills">
+            <div class="section-content fade-in-section">
+                <h2>Skills</h2>
+
+                <div class="skills-group">
+                    <h3>Technical</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag">Bash</span>
+                        <span class="skill-tag">Batch</span>
+                        <span class="skill-tag">SQL</span>
+                        <span class="skill-tag">HTML</span>
+                        <span class="skill-tag">CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">XML</span>
+                        <span class="skill-tag">XSL</span>
+                        <span class="skill-tag">DTD</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <h3>Soft Skills</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">Teamwork</span>
+                        <span class="skill-tag">Time Management</span>
+                        <span class="skill-tag">Effective Communication</span>
+                        <span class="skill-tag">Critical Thinking</span>
+                        <span class="skill-tag">Fast Learner</span>
+                        <span class="skill-tag">Creative</span>
+                    </div>
+                </div>
+
+                <div class="skills-group">
+                    <h3>Languages</h3>
+                    <div class="skills-list">
+                        <span class="skill-tag">English — Fluent</span>
+                        <span class="skill-tag">French — Fluent</span>
+                        <span class="skill-tag">ASL — Beginner</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!--Education Section-->
+        <section id="education">
+            <div class="section-content fade-in-section">
+                <h2>Education</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>O Levels / School Certificate</h3>
+                            <p class="timeline-meta">Gaetan Raynal State College, Quatre Bornes</p>
+                            <p class="timeline-dates">2020–2022</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>A Levels / Higher School Certificate</h3>
+                            <p class="timeline-meta">Gaetan Raynal State College, Quatre Bornes</p>
+                            <p class="timeline-dates">2023–2024</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Middlesex University Mauritius</h3>
+                            <p class="timeline-meta">BSc Computer Science (Systems Engineering)</p>
+                            <p class="timeline-dates">2025–2027</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!--Activities/Achievements Section-->
+        <section id="activities">
+            <div class="section-content fade-in-section">
+                <h2>Activities & Achievements</h2>
+
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Internet and Computing Core Certification (IC3)</h3>
+                            <p class="timeline-dates">2019</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Class Captain</h3>
+                            <p class="timeline-dates">2020</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Bronze Award, Duke of Edinburgh's International Award</h3>
+                            <p class="timeline-dates">2022</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Certificate of Course Completion — Entrepreneurship Education (Build Your Business)</h3>
+                            <p class="timeline-dates">2023</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>School Prefect</h3>
+                            <p class="timeline-dates">2023</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Handball Organizing Committee</h3>
+                            <p class="timeline-dates">2023–2024</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <h3>Sports Captain</h3>
+                            <p class="timeline-dates">2024</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!--Projects Section-->
+        <section id="projects">
+            <div class="section-content fade-in-section">
+                <h2>Projects</h2>
+
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project2.jpg" alt="Project 1 screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>[Project Name]</h3>
+                            <p>[Short description of what it does and the problem it solves.]</p>
+                            <div class="project-tags">
+                                <span class="project-tag">JavaScript</span>
+                                <span class="project-tag">HTML</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="Pomodoro-Timer.png" alt="Project 2 screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>Pomodoro Timer</h3>
+                            <p>A Pomodoro timer with a custom draggable dial interface — set focus 
+                               durations by dragging a circular handle or using arrow keys, with a 
+                               progress ring that depletes like a kitchen timer unwinding. Automatically 
+                               cycles through focus sessions and breaks, fully keyboard accessible, 
+                               and built entirely with vanilla HTML, CSS, and JavaScript — no frameworks.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">HTML</span>
+                                <span class="project-tag">CSS</span>
+                                <span class="project-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/RohiniDeviBeegoo/Pomodoro-Timer" class="project-link">GitHub</a>
+                                <a href="https://rohinidevibeegoo.github.io/Pomodoro-Timer/" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-image">
+                            <img src="images/project3.jpg" alt="Project 3 screenshot">
+                        </div>
+                        <div class="project-info">
+                            <h3>[Project Name]</h3>
+                            <p>[Short description of what it does and the problem it solves.]</p>
+                            <div class="project-tags">
+                                <span class="project-tag">C</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="#" class="project-link">GitHub</a>
+                                <a href="#" class="project-link">Live Demo</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-divider"></div>
+
+        <!--Contact Section-->
+        <section id="contact">
+            <div class="section-content fade-in-section">
+                <h2>Contact</h2>
+                <p>Feel free to reach out — I'd love to connect.</p>
+
+                <div class="contact-links">
+                    <a href="mailto:rohinibeegoo05@gmail.com" class="contact-icon" aria-label="Email">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://linkedin.com/in/yourprofile" target="_blank" class="contact-icon" aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M19 0h-14c-2.76 0-5 2.24-5 5v14c0 2.76 2.24 5 5 5h14c2.76 0 5-2.24 5-5v-14c0-2.76-2.24-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.27c-.97 0-1.75-.79-1.75-1.75s.78-1.75 1.75-1.75 1.75.79 1.75 1.75-.78 1.75-1.75 1.75zm13.5 12.27h-3v-5.6c0-1.34-.03-3.07-1.87-3.07-1.87 0-2.16 1.46-2.16 2.97v5.7h-3v-11h2.88v1.5h.04c.4-.76 1.38-1.56 2.84-1.56 3.04 0 3.6 2 3.6 4.59v6.47z"/>
+                        </svg>
+                    </a>
+
+                    <a href="https://github.com/RohiniDeviBeegoo" target="_blank" class="contact-icon" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <script src="script.js"></script>
+    </body>
+</html>
